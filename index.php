@@ -15,18 +15,12 @@
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
- 
- <?php include_once('navbar.php')  ?>
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="../../index3.html" class="brand-link">
-      <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
-    </a>
 
-    <?php include_once('sidebar.php') ?>
-  </aside>
+ <!--Navbar-->
+ <?php include_once('navbar.php')  ?>
+
+ <!--Sidebar-->
+  <?php include_once('sidebar.php') ?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
