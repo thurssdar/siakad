@@ -14,7 +14,7 @@
           <img src="dist/img/gmbr.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Amanda Frizka</a>
+          <a href="#" class="d-block">Dara Shalsabila Furda</a>
         </div>
       </div>
 
