@@ -1,7 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION(['sid']))){
-  header("location: login.php");
+if(!isset($_SESSION['sid'])){
   ?>
   <script>
     document.location="login.php";
