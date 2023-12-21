@@ -4,7 +4,7 @@ $pesan ="";
 
 if(isset($_POST['tombol'])){
 
-  //1. Koneksi data ke database
+  //1. Koneksi data ke database 
   include_once("koneksi.php");
 
   //2. Mengambil Nilai Dari Input
