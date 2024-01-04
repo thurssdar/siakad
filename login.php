@@ -20,26 +20,33 @@ if(isset($_POST['tombol'])){
   //5. menghitung jumlah hasil query
   $hitung = mysqli_num_rows($result);
 
-  if($hitung > 0){
+  if($hitung){
     //Proses Login
 
     // Mengambil seluruh Data Login
     $data = mysqli_fetch_array($result);
-
     $id   = $data ['id'];
     $nama = $data ['nama'];
 
+    if($_POST['ingat'] == "yes"){
+      //pembutan cookie
+      setcookie("cid",$id, time() + (60*60*24*3), "/");
+      setcookie("cnama",$nama, time() + (60*60*24*3), "/");
+      setcookie("cemail",$email, time() + (60*60*24*3), "/");
+
+    }else{
     // Pembuatan session
     $_SESSION['sid'] = $id;
     $_SESSION['snama'] = $nama;
     $_SESSION['semail'] = $email;
 
+    }
+
     // Update Las_LOG
-    $qry_update = "UPDATE users SET last_log='now()' WHERE id= '$id'";
+    $qry_update = "UPDATE users SET last_log=now() WHERE id= '$id'";
     $res_update = mysqli_query($con, $qry_update);
 
-    //Pengalihan Ke Halaman Index
-    
+    //Pengalihan Ke Halaman Index 
   ?>
     <script>
         document.location="index.php";
@@ -102,7 +109,7 @@ if(isset($_POST['tombol'])){
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
-              <input type="checkbox" id="remember">
+              <input type="checkbox" id="remember" name="ingat" value="yes">
               <label for="remember">
                 Remember Me
               </label>
