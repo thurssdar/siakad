@@ -14,7 +14,7 @@
           <img src="dist/img/avatar4.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Dara Shalsabila Furda</a>
+          <a href="#" class="d-block"><?php echo $l_nama ?></a>
         </div>
       </div>
 
